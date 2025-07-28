@@ -1,4 +1,3 @@
-import sys
 from web3 import Web3
 from web3.exceptions import TransactionNotFound
 from eth_utils import to_hex
@@ -12,9 +11,6 @@ from datetime import datetime, timezone
 from colorama import *
 import asyncio, random, secrets, json, time, re, os, pytz
 
-if sys.platform == 'win32':
-	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    
 wib = pytz.timezone('Asia/Jakarta')
 
 class PharosTestnet:

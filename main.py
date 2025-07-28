@@ -1,7 +1,10 @@
 import asyncio
 import importlib
 from colorama import *
-
+import sys
+if sys.platform == 'win32':
+	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    
 
 def main():
     while True:
@@ -10,7 +13,7 @@ def main():
         print(f"{Fore.WHITE + Style.BRIGHT}2. OpenFi {Style.RESET_ALL}")
         print(f"{Fore.WHITE + Style.BRIGHT}3. Brokex {Style.RESET_ALL}")
         print(f"{Fore.WHITE + Style.BRIGHT}4. Faros {Style.RESET_ALL}")
-        print(f"{Fore.WHITE + Style.BRIGHT}4. Gotchip {Style.RESET_ALL}")
+        print(f"{Fore.WHITE + Style.BRIGHT}5. Gotchip {Style.RESET_ALL}")
 
         option = int(input(f"{Fore.BLUE + Style.BRIGHT}Choose [1/2/3/4/5] -> {Style.RESET_ALL}").strip())
         
